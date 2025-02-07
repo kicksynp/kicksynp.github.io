@@ -439,7 +439,7 @@ nav ul {
 }
 
 .home .home-content .btn {
-  margin-top: 200px;
+  margin-top: 20%;
 }
 
 /* about section------------------------- */
@@ -482,7 +482,7 @@ nav ul {
 .about .about-content .right .text {
   font-size: 23px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: var(--white);
 }
 
@@ -497,6 +497,11 @@ nav ul {
 
 .about .about-content .right .btn-default {
   margin-top: 25px;
+}
+
+.about .about-content .right .text {
+  font-size: 22px;
+  height: 42px;
 }
 
 /* services section starts----------------------------------------- */
@@ -833,6 +838,11 @@ nav ul {
     flex: 100%;
   }
 
+  .about .about-content .right .text {
+    font-size: 20px;
+    height: 42px;
+  }
+
   .services .serv-content .card {
     width: 100%;
     margin-bottom: 20px;
@@ -930,7 +940,8 @@ nav ul {
   }
 
   .about .about-content .right .text {
-    font-size: 20px;
+    font-size: 17px;
+    height: 42px;
   }
 
   .about .about-content .left .mySlides img {
