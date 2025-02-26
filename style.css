@@ -109,37 +109,22 @@ section .title::after {
 }
 
 /* ------------------page loader------------------------ */
-.page-loader {
+.loader {
   position: fixed;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--dark);
-  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
-.page-loader.fade-out {
-  opacity: 0;
-}
-
-.page-loader::before {
-  content: "";
-  position: absolute;
-  height: 4px;
+.loader img {
   width: 100px;
-  background-color: var(--main-color);
-  left: calc(50% - 50px);
-  top: calc(50% - 2px);
-  animation: pageLoader 1s linear infinite;
-  transition: all 0.6s ease;
-  width: 100%;
-  background-color: var(--dark);
-  z-index: 999;
+
+  height: auto;
 }
 
-.page-loader.fade-out {
-  opacity: 0;
+.loaded #loader {
+  display: none;
 }
 
 #clackers {
