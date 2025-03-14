@@ -22,7 +22,10 @@
       property="og:description"
       content="Shop stylish and affordable shoes from Kicksy Nepal. Premium quality footwear for all occasions."
     />
-    <meta property="og:image" content="" />
+    <meta
+      property="og:image"
+      content="https://kicksy.com.np/assets/images/kicksysq.jpg"
+    />
     <meta property="og:url" content="https://kicksy.com.np" />
     <meta property="og:type" content="website" />
     <!-- Twitter Meta Tags -->
@@ -32,7 +35,10 @@
       name="twitter:description"
       content="Discover the best deals on sneakers, sports shoes, and casual footwear in Nepal with Kicksy."
     />
-    <meta name="twitter:image" content="" />
+    <meta
+      name="twitter:image"
+      content="https://kicksy.com.np/assets/images/kicksysq.jpg"
+    />
     <!-- Favicon and Stylesheets -->
     <link
       rel="icon"
@@ -75,14 +81,49 @@
     />
 
     <link rel="stylesheet" href="./css/aos.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "url": "https://www.kicksy.com.np",
+        "name": "Kicksy Nepal - Premium Footwears at Unbeatable Prices",
+        "description": "Discover the best deals on sneakers, sports shoes, and casual footwear in Nepal with Kicksy.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.kicksy.com.np/assets/images/kicksysq.jpg",
+          "width": 800,
+          "height": 600
+        }
+      }
+    </script>
   </head>
 
   <body>
     <!-- page loader starts -->
-<!--     <div id="loader" class="loader">
+    <!--     <div id="loader" class="loader">
       <img src="./assets/images/kicksyload.gif" alt="Loading" />
     </div> -->
     <!-- page loader ends -->
+    <!-- pop-ups -->
+    <div class="overlay" id="offerPopup">
+      <div class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <img src="./assets/images/specialoffer.png" alt="Special Offer" />
+        <h2>Exclusive Holi Sale!</h2>
+        <p>
+          Get off on all sneakers! Limited time offer.<br />Valid till 15th
+          March!
+        </p>
+        <button
+          onclick="window.open('https://www.instagram.com/kicksy.np', '_blank')"
+        >
+          Grab Yours Today!
+        </button>
+      </div>
+    </div>
+    <!-- pop-ups ends -->
+
     <nav class="navbar" id="navbar">
       <div class="max-width">
         <div class="logo">
@@ -190,30 +231,18 @@
           <div class="column left" data-aos="fade-right">
             <div class="slideshow-container">
               <div class="mySlides fade">
-                <img
-                  src="./assets/images/shoes/1.png"
-                  alt="image"
-                />
+                <img src="./assets/images/shoes/1.png" alt="image" />
               </div>
 
               <div class="mySlides fade">
-                <img
-                  src="./assets/images/shoes/2.png"
-                  alt="image"
-                />
+                <img src="./assets/images/shoes/2.png" alt="image" />
               </div>
 
               <div class="mySlides fade">
-                <img
-                  src="./assets/images/shoes/3.png"
-                  alt="image"
-                />
+                <img src="./assets/images/shoes/3.png" alt="image" />
               </div>
               <div class="mySlides fade">
-                <img
-                  src="./assets/images/shoes/4.png"
-                  alt="image"
-                />
+                <img src="./assets/images/shoes/4.png" alt="image" />
               </div>
               <div class="mySlides fade">
                 <img
@@ -545,10 +574,40 @@
         document.body.classList.toggle("light-theme");
       };
     </script>
-<!--     <script>
+    <!--     <script>
       window.addEventListener("load", function () {
         document.body.classList.add("loaded");
       });
     </script> -->
+    <!-- popup offer  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+          let popup = document.getElementById("offerPopup");
+          popup.style.display = "flex";
+          setTimeout(() => {
+            popup.querySelector(".popup").style.transform = "translateY(0)";
+            popup.querySelector(".popup").style.opacity = "1";
+          }, 50);
+        }, 3000);
+
+        // Close the popup when clicking on the overlay
+        let overlay = document.getElementById("offerPopup");
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            closePopup();
+          }
+        });
+      });
+
+      function closePopup() {
+        let popup = document.getElementById("offerPopup");
+        popup.querySelector(".popup").style.transform = "translateY(-20px)";
+        popup.querySelector(".popup").style.opacity = "0";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 300);
+      }
+    </script>
   </body>
 </html>
