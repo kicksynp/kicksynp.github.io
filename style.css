@@ -162,7 +162,7 @@ section .title::after {
   border-radius: 8px;
 }
 
-.popup h2 {
+.popup h1 {
   margin: 10px 0;
   color: #bc0600;
 }
@@ -210,7 +210,7 @@ section .title::after {
     margin-bottom: 30%;
   }
 
-  .popup h2 {
+  .popup h1 {
     font-size: 20px;
   }
 
