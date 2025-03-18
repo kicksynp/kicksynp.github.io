@@ -700,7 +700,11 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.testimonials .carousel .card:hover .box {
+  transform: scale(1.05);
 }
 
 .testimonials .carousel .card .text {
