@@ -225,6 +225,20 @@ section .title::after {
 }
 
 /* ------------------popups ends------------------------ */
+/* star style */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.star {
+  color: #ffd700;
+  /* Gold color */
+}
+
+/* stars animation ends */
 
 #clackers {
   /*   border: 1px solid white; */
